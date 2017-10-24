@@ -1,34 +1,16 @@
 <div class="content"> 
-  <!-- <div class="example-container mat-elevation-z8">
-    <md-table #table [dataSource]="dataSource">     
-      <ng-container mdColumnDef="id">
-        <md-header-cell *mdHeaderCellDef> No. </md-header-cell>
-        <md-cell *mdCellDef="let results"> {{results.id}} </md-cell>
-      </ng-container>
-  
-      <ng-container mdColumnDef="repoName">
-        <md-header-cell *mdHeaderCellDef> Repo Name </md-header-cell>
-        <md-cell *mdCellDef="let results"> {{results.repoName}} </md-cell>
-      </ng-container>
-
-      <ng-container mdColumnDef="repoDesc">
-        <md-header-cell *mdHeaderCellDef> Repo Desc </md-header-cell>
-        <md-cell *mdCellDef="let results"> {{results.repoDesc}} </md-cell>
-      </ng-container>
-  
-      <ng-container mdColumnDef="ownerName">
-        <md-header-cell *mdHeaderCellDef> Owner Name </md-header-cell>
-        <md-cell *mdCellDef="let results"> {{results.ownerName}} </md-cell>
-      </ng-container>
-  
-      <ng-container mdColumnDef="type">
-        <md-header-cell *mdHeaderCellDef> Owner Type </md-header-cell>
-        <md-cell *mdCellDef="let results"> {{results.type}} </md-cell>
-      </ng-container>
-  
-      <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
-      <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
-    </md-table>
-  </div> -->
-  <p>{{results}}</p>
+  <div class="example-container mat-elevation-z8">
+    <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Notification Url</th>
+        </tr>
+        <tr *ngFor="let item of data">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.notifications_url}}</td>
+        </tr>
+      </table>
+  </div>
 </div>
